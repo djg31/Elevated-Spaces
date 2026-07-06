@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elevated Spaces Services | Raleigh, NC Cleaning</title>
+<meta name="description" content="Elevated Spaces Services — professional residential and commercial cleaning in Raleigh, NC and the surrounding Triangle area.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Jost:wght@300;400;500;600&family=Alex+Brush&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cream:#FBF6EF;
+    --cream-deep:#F4ECE1;
+    --blush:#F0DCC9;
+    --blush-soft:#F8EBDF;
+    --terracotta:#C1704E;
+    --terracotta-dark:#9C5638;
+    --terracotta-light:#DDA07E;
+    --sage:#899874;
+    --sage-dark:#697859;
+    --gold:#D3A24B;
+    --charcoal:#3A322C;
+    --slate:#726D66;
+    --line: rgba(58,50,44,0.12);
+    --radius: 4px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Jost', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  ul{list-style:none; margin:0; padding:0;}
+
+  h1,h2,h3,h4{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    margin:0;
+    color:var(--charcoal);
+    letter-spacing:-0.01em;
+  }
+
+  .script{
+    font-family:'Alex Brush', cursive;
+    color:var(--terracotta);
+    font-weight:400;
+    line-height:1;
+  }
+
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.22em;
+    font-size:0.72rem;
+    font-weight:600;
+    color:var(--sage-dark);
+  }
+
+  .wrap{
+    max-width:1160px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:14px 30px;
+    border-radius:999px;
+    font-family:'Jost', sans-serif;
+    font-size:0.92rem;
+    font-weight:500;
+    letter-spacing:0.02em;
+    border:1px solid transparent;
+    cursor:pointer;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color .25s ease;
+  }
+  .btn-primary{
+    background:var(--terracotta);
+    color:#fff;
+    box-shadow:0 8px 24px -8px rgba(193,112,78,0.55);
+  }
+  .btn-primary:hover{ background:var(--terracotta-dark); transform:translateY(-2px); }
+  .btn-outline{
+    background:transparent;
+    color:var(--charcoal);
+    border-color:var(--line);
+  }
+  .btn-outline:hover{ border-color:var(--terracotta); color:var(--terracotta-dark); transform:translateY(-2px); }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,246,239,0.88);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:14px 32px;
+    max-width:1160px; margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:12px; }
+  .brand img{ height:46px; width:auto; }
+  .brand-name{ font-family:'Fraunces', serif; font-size:1.05rem; letter-spacing:0.01em; }
+  .brand-name b{ color:var(--terracotta); font-weight:600; }
+
+  .nav-links{ display:flex; gap:36px; align-items:center; }
+  .nav-links a{
+    font-size:0.86rem; font-weight:500; color:var(--charcoal);
+    position:relative; padding:4px 0;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px;
+    background:var(--terracotta); transition:width .25s ease;
+  }
+  .nav-links a:hover::after{ width:100%; }
+  .nav-cta{ display:flex; align-items:center; gap:18px; }
+  .phone-link{ font-weight:600; color:var(--terracotta-dark); font-size:0.9rem; display:flex; gap:8px; align-items:center;}
+  .menu-toggle{ display:none; background:none; border:none; cursor:pointer; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:80px 0 40px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:3.4rem;
+    line-height:1.05;
+    margin:14px 0 22px;
+  }
+  .hero h1 .accent{
+    font-family:'Alex Brush', cursive;
+    font-size:1.35em;
+    color:var(--terracotta);
+    display:inline-block;
+    line-height:0.8;
+    padding-right:6px;
+  }
+  .hero p.lede{
+    font-size:1.08rem;
+    color:var(--slate);
+    max-width:460px;
+    margin-bottom:32px;
+  }
+  .hero-actions{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:38px;}
+  .trust-row{
+    display:flex; gap:28px; flex-wrap:wrap;
+    padding-top:26px; border-top:1px solid var(--line);
+  }
+  .trust-item{ display:flex; align-items:center; gap:9px; font-size:0.82rem; color:var(--slate); font-weight:500;}
+  .trust-item svg{ flex-shrink:0; }
+
+  .hero-art{
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+    min-height:440px;
+  }
+  .hero-art .blob{
+    position:absolute;
+    width:420px; height:420px;
+    background:radial-gradient(circle at 35% 30%, var(--blush-soft), var(--blush) 60%, transparent 75%);
+    border-radius:50%;
+    filter:blur(2px);
+  }
+  .hero-art img.logo-mark{
+    position:relative;
+    width:min(430px, 90%);
+    animation: floaty 6s ease-in-out infinite;
+  }
+  @keyframes floaty{
+    0%,100%{ transform:translateY(0px); }
+    50%{ transform:translateY(-10px); }
+  }
+  .spark{
+    position:absolute;
+    color:var(--gold);
+    animation: twinkle 2.6s ease-in-out infinite;
+  }
+  @keyframes twinkle{
+    0%,100%{ opacity:0.25; transform:scale(0.85); }
+    50%{ opacity:1; transform:scale(1.1); }
+  }
+
+  /* ---------- Skyline divider (signature element) ---------- */
+  .skyline-divider{
+    width:100%;
+    height:64px;
+    display:block;
+  }
+  .skyline-divider path{ fill: var(--blush-soft); }
+  .skyline-divider.flip{ transform:scaleY(-1); }
+
+  /* ---------- Section basics ---------- */
+  section{ padding:96px 0; }
+  .section-head{
+    max-width:600px;
+    margin:0 auto 56px;
+    text-align:center;
+  }
+  .section-head .eyebrow{ display:block; margin-bottom:12px; }
+  .section-head h2{ font-size:2.3rem; margin-bottom:14px; }
+  .section-head p{ color:var(--slate); font-size:1rem; }
+
+  /* ---------- Services ---------- */
+  .services{ background:var(--blush-soft); position:relative;}
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  .service-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:34px 30px;
+    transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+  }
+  .service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px -22px rgba(58,50,44,0.25);
+    border-color:transparent;
+  }
+  .service-icon{
+    width:48px; height:48px;
+    border-radius:50%;
+    background:var(--blush);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px;
+    color:var(--terracotta-dark);
+  }
+  .service-card h3{ font-size:1.18rem; margin-bottom:10px; }
+  .service-card p{ color:var(--slate); font-size:0.92rem; margin:0; }
+  .service-card .price-tag{
+    display:inline-block; margin-top:16px;
+    font-size:0.78rem; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--sage-dark); font-weight:600;
+  }
+
+  /* ---------- Why us ---------- */
+  .why{ }
+  .why-grid{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .why-visual{
+    position:relative;
+    border-radius:6px;
+    overflow:hidden;
+    background:linear-gradient(160deg, var(--blush) 0%, var(--blush-soft) 100%);
+    aspect-ratio:1/1;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .why-visual img{ width:55%; opacity:0.92; }
+  .why-list{ display:flex; flex-direction:column; gap:28px; }
+  .why-item{ display:flex; gap:18px; }
+  .why-num{
+    font-family:'Fraunces', serif;
+    font-size:1.6rem;
+    color:var(--terracotta-light);
+    min-width:44px;
+  }
+  .why-item h4{ font-size:1.08rem; margin-bottom:6px; }
+  .why-item p{ color:var(--slate); font-size:0.92rem; margin:0; }
+
+  /* ---------- Service area ---------- */
+  .area{
+    background:var(--charcoal);
+    color:#EFE7DC;
+    position:relative;
+    overflow:hidden;
+  }
+  .area .section-head p, .area .section-head .eyebrow{ color:#C9BFB2; }
+  .area .section-head h2{ color:#F6EFE5; }
+  .area-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    align-items:center;
+  }
+  .town-pills{ display:flex; flex-wrap:wrap; gap:12px; }
+  .town-pill{
+    padding:10px 20px;
+    border:1px solid rgba(239,231,220,0.25);
+    border-radius:999px;
+    font-size:0.86rem;
+    color:#EFE7DC;
+    display:flex; align-items:center; gap:8px;
+  }
+  .town-pill svg{ color:var(--gold); }
+  .area-copy p{ color:#C9BFB2; margin-bottom:26px; max-width:440px; }
+  .area-skyline{ position:relative; height:220px; }
+  .area-skyline svg{ width:100%; height:100%; }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials{ background:var(--cream-deep); }
+  .t-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:26px;
+  }
+  .t-card{
+    background:var(--cream);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:32px;
+  }
+  .t-stars{ color:var(--gold); font-size:0.95rem; margin-bottom:16px; letter-spacing:2px;}
+  .t-card p{ font-size:0.95rem; color:var(--charcoal); margin-bottom:20px; }
+  .t-name{ font-size:0.85rem; font-weight:600; color:var(--terracotta-dark); }
+  .t-loc{ font-size:0.78rem; color:var(--slate); }
+  .t-note{
+    text-align:center; margin-top:28px; font-size:0.78rem; color:var(--slate); font-style:italic;
+  }
+
+  /* ---------- CTA band ---------- */
+  .cta-band{
+    background:var(--terracotta);
+    color:#fff;
+    text-align:center;
+  }
+  .cta-band h2{ color:#fff; font-size:2.1rem; margin-bottom:16px; }
+  .cta-band p{ color:rgba(255,255,255,0.85); max-width:480px; margin:0 auto 34px; }
+  .cta-band .btn-outline{ color:#fff; border-color:rgba(255,255,255,0.5); }
+  .cta-band .btn-outline:hover{ background:rgba(255,255,255,0.12); border-color:#fff; color:#fff;}
+  .cta-band .btn-primary{ background:#fff; color:var(--terracotta-dark); box-shadow:none;}
+  .cta-band .btn-primary:hover{ background:#F6EFE5; }
+  .cta-actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+  /* ---------- Contact ---------- */
+  .contact{ }
+  .contact-grid{
+    display:grid;
+    grid-template-columns:0.85fr 1.15fr;
+    gap:56px;
+  }
+  .contact-info h3{ font-size:1.3rem; margin-bottom:18px; }
+  .info-row{ display:flex; gap:14px; margin-bottom:22px; align-items:flex-start; }
+  .info-row svg{ color:var(--terracotta); flex-shrink:0; margin-top:2px; }
+  .info-row .label{ font-size:0.78rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--sage-dark); font-weight:600; margin-bottom:3px;}
+  .info-row .value{ font-size:0.95rem; color:var(--charcoal); }
+  .hours-table{ margin-top:8px; }
+  .hours-table div{ display:flex; justify-content:space-between; font-size:0.88rem; color:var(--slate); padding:4px 0; border-bottom:1px dashed var(--line); max-width:280px;}
+
+  form.quote-form{
+    background:var(--blush-soft);
+    border-radius:6px;
+    padding:38px;
+    border:1px solid var(--line);
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+  .form-field{ display:flex; flex-direction:column; gap:6px; }
+  .form-field.full{ grid-column:1/-1; }
+  .form-field label{ font-size:0.78rem; font-weight:600; color:var(--charcoal); letter-spacing:0.02em; }
+  .form-field input, .form-field select, .form-field textarea{
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    background:#fff;
+    font-family:'Jost', sans-serif;
+    font-size:0.92rem;
+    color:var(--charcoal);
+  }
+  .form-field textarea{ resize:vertical; min-height:90px; }
+  .form-field input:focus, .form-field select:focus, .form-field textarea:focus{
+    outline:2px solid var(--terracotta-light);
+    outline-offset:1px;
+  }
+  form.quote-form .btn-primary{ width:100%; justify-content:center; margin-top:6px; }
+  .form-note{ font-size:0.78rem; color:var(--slate); margin-top:12px; text-align:center; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--charcoal);
+    color:#C9BFB2;
+    padding:56px 0 28px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:36px;
+    border-bottom:1px solid rgba(239,231,220,0.14);
+  }
+  .footer-brand{ display:flex; gap:12px; align-items:center; margin-bottom:14px; }
+  .footer-brand img{ height:40px; }
+  .footer-brand span{ font-family:'Fraunces', serif; color:#F6EFE5; font-size:1rem; }
+  .footer-col h5{
+    color:#F6EFE5; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.08em;
+    margin-bottom:16px; font-family:'Jost', sans-serif; font-weight:600;
+  }
+  .footer-col li{ margin-bottom:10px; font-size:0.88rem; }
+  .footer-col a:hover{ color:#F6EFE5; }
+  .footer-bottom{
+    display:flex; justify-content:space-between; align-items:center;
+    padding-top:24px; font-size:0.8rem; flex-wrap:wrap; gap:10px;
+  }
+  .footer-social{ display:flex; gap:14px; }
+  .footer-social a{
+    width:34px; height:34px; border-radius:50%; border:1px solid rgba(239,231,220,0.25);
+    display:flex; align-items:center; justify-content:center;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .nav-links{ display:none; }
+    .menu-toggle{ display:block; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero h1{ font-size:2.5rem; }
+    .hero-art{ order:-1; min-height:300px; }
+    .service-grid{ grid-template-columns:1fr 1fr; }
+    .why-grid{ grid-template-columns:1fr; }
+    .area-grid{ grid-template-columns:1fr; }
+    .t-grid{ grid-template-columns:1fr; }
+    .contact-grid{ grid-template-columns:1fr; }
+    .footer-grid{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width: 560px){
+    .wrap{ padding:0 20px; }
+    section{ padding:70px 0; }
+    .service-grid{ grid-template-columns:1fr; }
+    .form-row{ grid-template-columns:1fr; }
+    .hero h1{ font-size:2.1rem; }
+    .footer-grid{ grid-template-columns:1fr; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <img src="assets/logo.png" alt="Elevated Spaces Services logo">
+      <span class="brand-name"><b>Elevated Spaces</b><br>Services</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="#area">Service Area</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="phone-link" href="tel:19195550142">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (919) 555-0142
+      </a>
+      <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Raleigh, NC &amp; the Triangle</span>
+        <h1><span class="accent">Elevated</span> spaces,<br>effortless living.</h1>
+        <p class="lede">Detail-driven residential and commercial cleaning for Raleigh homes and businesses that expect their space to feel as good as it looks.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
+          <a href="#services" class="btn btn-outline">See Our Services</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed &amp; insured
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 8.5 22 9.5 17 14.5 18.2 21.5 12 18 5.8 21.5 7 14.5 2 9.5 9 8.5 12 2"/></svg>
+            5-star rated locally
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+            Satisfaction guaranteed
+          </div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="blob"></div>
+        <svg class="spark" style="top:8%; left:12%;" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+        <svg class="spark" style="top:20%; right:14%; animation-delay:0.8s;" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+        <svg class="spark" style="bottom:14%; left:8%; animation-delay:1.4s;" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z"/></svg>
+        <img class="logo-mark" src="assets/logo.png" alt="Elevated Spaces Services emblem">
+      </div>
+    </div>
+  </section>
+
+  <svg class="skyline-divider" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,60 L0,40 L40,40 L40,20 L80,20 L80,40 L140,40 L140,10 L150,10 L150,4 L160,4 L160,10 L170,10 L170,40 L230,40 L230,25 L260,25 L260,15 L300,15 L300,40 L360,40 L360,30 L420,30 L420,40 L480,40 L480,18 L520,18 L520,40 L600,40 L600,22 L640,22 L640,8 L650,8 L650,2 L660,2 L660,8 L670,8 L670,40 L740,40 L740,28 L800,28 L800,40 L860,40 L860,15 L900,15 L900,35 L960,35 L960,20 L1010,20 L1010,40 L1080,40 L1080,25 L1140,25 L1140,40 L1200,40 L1200,60 Z"/>
+  </svg>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What We Offer</span>
+        <h2>Cleaning services built around your space</h2>
+        <p>From weekly upkeep to one-time deep cleans, every visit follows the same detail-first checklist &mdash; tailored to the way you actually live or work.</p>
+      </div>
+      <div class="service-grid">
+
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+          <h3>Residential Cleaning</h3>
+          <p>Recurring weekly, bi-weekly, or monthly visits that keep every room guest-ready.</p>
+          <span class="price-tag">Most popular</span>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 21l-4.35-4.35"/><circle cx="10" cy="10" r="7"/></svg></div>
+          <h3>Deep Cleaning</h3>
+          <p>A top-to-bottom reset &mdash; baseboards, vents, appliances, and every overlooked corner.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+          <h3>Move In / Move Out</h3>
+          <p>An empty-home deep clean so the next chapter starts, or ends, on a spotless note.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 4v5"/></svg></div>
+          <h3>Commercial &amp; Office</h3>
+          <p>After-hours and weekend service for offices, studios, and small storefronts across Raleigh.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4v6h6"/><path d="M20 20v-6h-6"/><path d="M20 9A8 8 0 0 0 6 5.3L4 10"/><path d="M4 15a8 8 0 0 0 14 3.7l2-4.7"/></svg></div>
+          <h3>Recurring Maintenance</h3>
+          <p>Set a schedule once and let it run &mdash; consistent teams, consistent results, every time.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5z"/><path d="M5 17l.8 2.2L8 20l-2.2.8L5 23l-.8-2.2L2 20l2.2-.8z"/></svg></div>
+          <h3>Post-Construction</h3>
+          <p>Dust, debris, and finishing touches cleared away after your renovation wraps up.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why" id="why">
+    <div class="wrap why-grid">
+      <div class="why-visual">
+        <img src="assets/logo.png" alt="Elevated Spaces Services brand mark">
+      </div>
+      <div>
+        <span class="eyebrow">Why Raleigh Chooses Us</span>
+        <h2 style="font-size:2.1rem; margin:14px 0 30px;">Cleaning, done with care and consistency</h2>
+        <div class="why-list">
+          <div class="why-item">
+            <span class="why-num">01</span>
+            <div>
+              <h4>Vetted, trained teams</h4>
+              <p>Every cleaner is background-checked and trained on our exact checklist before stepping into your space.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">02</span>
+            <div>
+              <h4>Eco-conscious products</h4>
+              <p>Effective, low-fume cleaning solutions that are safe around kids, pets, and allergies.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">03</span>
+            <div>
+              <h4>Transparent, flat pricing</h4>
+              <p>Your quote is your price &mdash; no surprise fees added after the walkthrough.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">04</span>
+            <div>
+              <h4>Local &amp; reliable</h4>
+              <p>Based in Raleigh, scheduled around your calendar, and backed by our satisfaction guarantee.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section class="area" id="area">
+    <div class="wrap">
+      <div class="area-grid">
+        <div class="area-copy">
+          <span class="eyebrow">Where We Work</span>
+          <h2 style="margin:14px 0 18px;">Proudly serving Raleigh and the greater Triangle</h2>
+          <p>If you're within about 25 minutes of downtown Raleigh, we're already in your neighborhood. Don't see your town listed? Ask &mdash; we're always expanding.</p>
+          <div class="town-pills">
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Raleigh</span>
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Cary</span>
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Apex</span>
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Garner</span>
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Wake Forest</span>
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Morrisville</span>
+            <span class="town-pill"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Durham (select areas)</span>
+          </div>
+        </div>
+        <div class="area-skyline">
+          <svg viewBox="0 0 500 220" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+            <g fill="none" stroke="#D3A24B" stroke-width="1.6" opacity="0.9">
+              <rect x="30" y="120" width="30" height="90"/>
+              <rect x="70" y="90" width="26" height="120"/>
+              <rect x="106" y="140" width="34" height="70"/>
+              <line x1="150" y1="210" x2="150" y2="60"/>
+              <line x1="140" y1="70" x2="160" y2="70"/>
+              <rect x="170" y="100" width="30" height="110"/>
+              <rect x="210" y="60" width="34" height="150"/>
+              <polygon points="227,10 214,60 240,60"/>
+              <rect x="252" y="130" width="24" height="80"/>
+              <rect x="284" y="150" width="40" height="60"/>
+              <rect x="330" y="95" width="28" height="115"/>
+              <rect x="366" y="125" width="30" height="85"/>
+              <rect x="404" y="70" width="26" height="140"/>
+              <rect x="438" y="145" width="32" height="65"/>
+            </g>
+            <g fill="#D3A24B">
+              <circle cx="80" cy="30" r="1.6"/>
+              <circle cx="230" cy="20" r="1.8"/>
+              <circle cx="330" cy="45" r="1.4"/>
+              <circle cx="420" cy="35" r="1.6"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Client Love</span>
+        <h2>What Raleigh is saying</h2>
+      </div>
+      <div class="t-grid">
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p>"Our house hasn't looked or smelled this good since we moved in. The team is punctual and incredibly thorough every single visit."</p>
+          <div class="t-name">Megan R.</div>
+          <div class="t-loc">North Raleigh</div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p>"We use them for our small studio downtown and the consistency is unmatched. Booking and rescheduling is effortless."</p>
+          <div class="t-name">Daniel T.</div>
+          <div class="t-loc">Downtown Raleigh</div>
+        </div>
+        <div class="t-card">
+          <div class="t-stars">★★★★★</div>
+          <p>"The move-out clean saved us so much stress. Our landlord commented on how spotless the place was at the final walkthrough."</p>
+          <div class="t-name">Priya S.</div>
+          <div class="t-loc">Cary</div>
+        </div>
+      </div>
+      <p class="t-note">Sample reviews shown for demonstration &mdash; swap in your own client testimonials here.</p>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Ready for an elevated space?</h2>
+      <p>Get a free, no-obligation quote in under 24 hours. Most first-time bookings are scheduled within the week.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary">Request Your Quote</a>
+        <a href="tel:19195550142" class="btn btn-outline">Call (919) 555-0142</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Get In Touch</span>
+        <h2>Request your free quote</h2>
+        <p>Tell us a little about your space and we'll follow up with a personalized quote &mdash; usually within one business day.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Contact details</h3>
+          <div class="info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><div class="label">Phone</div><div class="value">(919) 555-0142</div></div>
+          </div>
+          <div class="info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg>
+            <div><div class="label">Email</div><div class="value">hello@elevatedspacesservices.com</div></div>
+          </div>
+          <div class="info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <div><div class="label">Based in</div><div class="value">Raleigh, NC</div></div>
+          </div>
+          <div class="info-row">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <div class="label">Hours</div>
+              <div class="hours-table">
+                <div><span>Mon &ndash; Fri</span><span>8:00am &ndash; 6:00pm</span></div>
+                <div><span>Saturday</span><span>9:00am &ndash; 3:00pm</span></div>
+                <div><span>Sunday</span><span>Closed</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="quote-form" onsubmit="return false;">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="fname">First name</label>
+              <input id="fname" type="text" placeholder="Jane" required>
+            </div>
+            <div class="form-field">
+              <label for="lname">Last name</label>
+              <input id="lname" type="text" placeholder="Doe" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="jane@email.com" required>
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" placeholder="(919) 555-0100">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="service">Service needed</label>
+              <select id="service">
+                <option>Residential Cleaning</option>
+                <option>Deep Cleaning</option>
+                <option>Move In / Move Out</option>
+                <option>Commercial &amp; Office</option>
+                <option>Recurring Maintenance</option>
+                <option>Post-Construction</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="zip">Zip code</label>
+              <input id="zip" type="text" placeholder="27601">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field full">
+              <label for="details">Tell us about your space</label>
+              <textarea id="details" placeholder="Home size, number of rooms, preferred frequency, etc."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Request Free Quote</button>
+          <p class="form-note">Form is a front-end demo &mdash; connect it to email, a CRM, or a booking tool to go live.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Elevated Spaces Services">
+          <span>Elevated Spaces<br>Services</span>
+        </div>
+        <p style="font-size:0.88rem; max-width:260px; color:#B7AC9D;">Detail-driven cleaning for homes and businesses across Raleigh, NC and the Triangle.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#area">Service Area</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="#services">Residential</a></li>
+          <li><a href="#services">Commercial</a></li>
+          <li><a href="#services">Move In / Out</a></li>
+          <li><a href="#services">Deep Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:19195550142">(919) 555-0142</a></li>
+          <li><a href="mailto:hello@elevatedspacesservices.com">hello@elevatedspacesservices.com</a></li>
+          <li>Raleigh, NC</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Elevated Spaces Services. All rights reserved.</span>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Google"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile-friendly nav could be extended here; sticky header + smooth scroll are handled in CSS.
+  document.addEventListener('DOMContentLoaded', function(){
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 12){
+        header.style.boxShadow = '0 6px 24px -12px rgba(58,50,44,0.18)';
+      } else {
+        header.style.boxShadow = 'none';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
