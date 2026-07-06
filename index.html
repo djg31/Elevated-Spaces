@@ -737,53 +737,54 @@
           </div>
         </div>
 
-        <form class="quote-form" action="https://formspree.io/f/mbdvbjrp" method="POST">
-          <div class="form-row">
-            <div class="form-field">
-              <label for="fname">First name</label>
-              <input id="fname" type="text" placeholder="Jane" required>
-            </div>
-            <div class="form-field">
-              <label for="lname">Last name</label>
-              <input id="lname" type="text" placeholder="Doe" required>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="jane@email.com" required>
-            </div>
-            <div class="form-field">
-              <label for="phone">Phone</label>
-              <input id="phone" type="tel" placeholder="(919) 555-0100">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label for="service">Service needed</label>
-              <select id="service">
-                <option>Residential Cleaning</option>
-                <option>Deep Cleaning</option>
-                <option>Move In / Move Out</option>
-                <option>Commercial &amp; Office</option>
-                <option>Recurring Maintenance</option>
-                <option>Post-Construction</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="zip">Zip code</label>
-              <input id="zip" type="text" placeholder="27601">
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field full">
-              <label for="details">Tell us about your space</label>
-              <textarea id="details" placeholder="Home size, number of rooms, preferred frequency, etc."></textarea>
-            </div>
-          </div>
-          <button type="submit" class="btn btn-primary">Request Free Quote</button>
-          <p class="form-note">Form is a front-end demo &mdash; connect it to email, a CRM, or a booking tool to go live.</p>
-        </form>
+<form class="quote-form" action="https://formspree.io/f/mbdvbjrp" method="POST">
+  <div class="form-row">
+    <div class="form-field">
+      <label for="fname">First name</label>
+      <input id="fname" name="First Name" type="text" placeholder="Jane" required>
+    </div>
+    <div class="form-field">
+      <label for="lname">Last name</label>
+      <input id="lname" name="Last Name" type="text" placeholder="Doe" required>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" name="Email" type="email" placeholder="jane@email.com" required>
+    </div>
+    <div class="form-field">
+      <label for="phone">Phone</label>
+      <input id="phone" name="Phone" type="tel" placeholder="(919) 555-0100">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="service">Service needed</label>
+      <select id="service" name="Service Needed">
+        <option>Residential Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Move In / Move Out</option>
+        <option>Commercial &amp; Office</option>
+        <option>Recurring Maintenance</option>
+        <option>Post-Construction</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="zip">Zip code</label>
+      <input id="zip" name="Zip Code" type="text" placeholder="27601">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-field full">
+      <label for="details">Tell us about your space</label>
+      <textarea id="details" name="Details" placeholder="Home size, number of rooms, preferred frequency, etc."></textarea>
+    </div>
+  </div>
+  <input type="text" name="_gotcha" style="display:none">
+  <button type="submit" class="btn btn-primary">Request Free Quote</button>
+  <p class="form-note">We typically respond within one business day.</p>
+</form>
       </div>
     </div>
   </section>
